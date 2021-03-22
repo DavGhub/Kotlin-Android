@@ -46,8 +46,4 @@ class SimpleCalculator : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
-
-    fun validateInputs() {
-
-    }
 }
