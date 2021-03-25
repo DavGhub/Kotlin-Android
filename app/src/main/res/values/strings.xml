@@ -28,4 +28,9 @@
     <string name="password">Password</string>
     <string name="login">LOGIN</string>
     <string name="not_a_member_sign_up_now">Not a member? Sign up now.</string>
+    <string name="reset">Reset</string>
+    <string name="players"><![CDATA[Player1 -> X & Player2 -> O]]></string>
+    <string name="player_1">Player 1</string>
+    <string name="player_2">Player 2</string>
+    <string name="roll">Roll</string>
 </resources>

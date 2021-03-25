@@ -4,81 +4,129 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/b1"
-        android:layout_width="0dp"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/android_studio"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/row1"
-        android:layout_margin="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/b2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/row2"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintStart_toStartOf="@id/b1"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/b1" />
-
-    <Button
-        android:id="@+id/b3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/row2"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintStart_toEndOf="@id/b2"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/b1"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <Button
-        android:id="@+id/b4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/row3"
-        android:layout_marginStart="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/b2"
-        app:layout_constraintEnd_toEndOf="@id/b2"/>
-
-    <Button
-        android:id="@+id/b5"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/row3"
-        android:layout_marginStart="10dp"
-        app:layout_constraintTop_toBottomOf="@id/b2"
-        app:layout_constraintStart_toEndOf="@id/b4"
-        app:layout_constraintEnd_toStartOf="@id/b6"/>
-
-    <Button
-        android:id="@+id/b6"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/row3"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintTop_toBottomOf="@id/b2"
-        app:layout_constraintStart_toEndOf="@id/b5"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <Button
-        android:id="@+id/b7"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/row4"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintTop_toBottomOf="@id/b4"
+        android:src="@mipmap/and3_5"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/ic_star"
+        app:layout_constraintTop_toBottomOf="@id/android_studio"
+        app:layout_constraintBottom_toBottomOf="@id/android_studio"
+        app:layout_constraintEnd_toEndOf="@id/android_studio"/>
+
+    <ImageView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_phone"
+        android:layout_marginTop="@dimen/dim_48dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/android_studio"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/number1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:text="(650) 555 - 1234"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@id/phone"
+        app:layout_constraintStart_toEndOf="@id/phone"/>
+
+    <TextView
+        android:id="@+id/google_voice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Google Voice"
+        app:layout_constraintStart_toStartOf="@id/number1"
+        app:layout_constraintTop_toBottomOf="@id/number1"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_message"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toTopOf="@id/phone"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/number2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(650) 555 - 4321"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="@dimen/dim_48dp"
+        app:layout_constraintStart_toStartOf="@id/number1"
+        app:layout_constraintTop_toBottomOf="@id/google_voice"
+        app:layout_constraintStart_toEndOf="@id/phone"/>
+
+    <TextView
+        android:id="@+id/mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobile"
+        app:layout_constraintStart_toStartOf="@id/number2"
+        app:layout_constraintTop_toBottomOf="@id/number2"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_message"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toTopOf="@id/number2"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="@id/number1"
+        app:layout_constraintTop_toBottomOf="@id/mobile"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/email_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_email"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        app:layout_constraintStart_toStartOf="@id/phone"
+        />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stidio@android.com"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/number1"
+        app:layout_constraintTop_toTopOf="@id/email_icon"/>
+
+    <TextView
+        android:id="@+id/work"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Work"
+        app:layout_constraintStart_toStartOf="@id/email"
+        app:layout_constraintTop_toBottomOf="@id/email"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

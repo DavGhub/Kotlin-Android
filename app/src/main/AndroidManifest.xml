@@ -10,16 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SunnySchool">
 
-        <activity
-            android:name=".SimpleCalculator"
-            android:label="@string/title_activity_simple_calculator">
+        <activity android:name=".TicTacToe">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".DiceRoller">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
