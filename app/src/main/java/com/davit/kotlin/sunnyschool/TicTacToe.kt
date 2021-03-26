@@ -100,7 +100,7 @@ class TicTacToe : AppCompatActivity(), View.OnClickListener {
 
     private fun isThereAWinner(map: MutableMap<Int, String>, versionList: List<Map<Int, String>>): Boolean {
 
-        for (version in 0 until versionList.size - 1) {
+        for (version in versionList.indices) {
             if (map.entries.containsAll(versionList[version].entries)) {
                 println("Winner pattern: ${versionList[version]}")
                 winnerName = if(versionList[version].containsValue("X")){

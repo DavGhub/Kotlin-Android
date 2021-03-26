@@ -37,24 +37,27 @@
 
     <TextView
         android:id="@+id/number1"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="108dp"
         android:text="(650) 555 - 1234"
         android:textStyle="bold"
         android:textSize="16sp"
         app:layout_constraintTop_toTopOf="@id/phone"
-        app:layout_constraintStart_toEndOf="@id/phone"/>
+        app:layout_constraintStart_toEndOf="@id/phone"
+        app:layout_constraintEnd_toStartOf="@id/mesg_icon1"/>
 
     <TextView
         android:id="@+id/google_voice"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Google Voice"
         app:layout_constraintStart_toStartOf="@id/number1"
-        app:layout_constraintTop_toBottomOf="@id/number1"/>
+        app:layout_constraintTop_toBottomOf="@id/number1"
+        app:layout_constraintEnd_toEndOf="@id/number1"/>
 
     <ImageView
+        android:id="@+id/mesg_icon1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_message"
@@ -64,7 +67,7 @@
 
     <TextView
         android:id="@+id/number2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="(650) 555 - 4321"
         android:textStyle="bold"
@@ -72,17 +75,20 @@
         android:layout_marginTop="@dimen/dim_48dp"
         app:layout_constraintStart_toStartOf="@id/number1"
         app:layout_constraintTop_toBottomOf="@id/google_voice"
-        app:layout_constraintStart_toEndOf="@id/phone"/>
+        app:layout_constraintStart_toEndOf="@id/phone"
+        app:layout_constraintEnd_toStartOf="@id/msg_icon2"/>
 
     <TextView
         android:id="@+id/mobile"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Mobile"
         app:layout_constraintStart_toStartOf="@id/number2"
-        app:layout_constraintTop_toBottomOf="@id/number2"/>
+        app:layout_constraintTop_toBottomOf="@id/number2"
+        app:layout_constraintEnd_toEndOf="@id/number2"/>
 
     <ImageView
+        android:id="@+id/msg_icon2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_message"
@@ -113,20 +119,22 @@
 
     <TextView
         android:id="@+id/email"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="stidio@android.com"
         android:textStyle="bold"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@id/number1"
-        app:layout_constraintTop_toTopOf="@id/email_icon"/>
+        app:layout_constraintTop_toTopOf="@id/email_icon"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
         android:id="@+id/work"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Work"
         app:layout_constraintStart_toStartOf="@id/email"
-        app:layout_constraintTop_toBottomOf="@id/email"/>
+        app:layout_constraintTop_toBottomOf="@id/email"
+        app:layout_constraintEnd_toEndOf="@id/email"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
