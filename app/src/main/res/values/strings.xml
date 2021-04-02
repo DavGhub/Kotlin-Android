@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Fragments</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="results">Results</string>
+
+    <string name="hello_world">Hello Square World!</string>
+    <string name="zero_error">Error dividing on zero</string>
+    <string name="first_number">First Number</string>
+    <string name="second_number">Second Number</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="multiply">x</string>
+    <string name="divide">/</string>
+    <string name="result">Result</string>
+    <string name="_0_0">0.0</string>
+    <string name="row1">Row1</string>
+    <string name="row2">Row2</string>
+    <string name="row3">Row3</string>
+    <string name="row4">Row4</string>
+    <string name="details_form">DETAILS FORM</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="gender">Gender</string>
+    <string name="submit">Submit</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="not_a_member_sign_up_now">Not a member? Sign up now.</string>
+    <string name="reset">Reset</string>
+    <string name="players"><![CDATA[Player1 -> X & Player2 -> O]]></string>
+    <string name="players_with_names">%1$s -> X &amp; %2$s -> O</string>
+    <string name="player_1">Player 1</string>
+    <string name="player_2">Player 2</string>
+    <string name="roll">Roll</string>
+    <string name="first_player_name">First player name</string>
+    <string name="second_player_name">Second player name</string>
+    <string name="save">Save</string>
+    <string name="tic_tac_toe">Tic-Tac-Toe</string>
+    <string name="dice">Dice</string>
+    <string name="set_names">Set names</string>
+
+    <string name="player1_result">%1$s - %2$d</string>
+    <string name="player2_result">%1$s - %2$d</string>
+    <string name="new_game">New game</string>
+    <string name="end_game">End game</string>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/resultsNavFragment">
+    <fragment
+        android:id="@+id/setNamesNavFragment"
+        android:name="com.davit.kotlin.fragments.ex2.SetNamesNavFragment"
+        android:label="SetNamesNavFragment" />
+    <fragment
+        android:id="@+id/resultsNavFragment"
+        android:name="com.davit.kotlin.fragments.ex2.ResultsNavFragment"
+        android:label="ResultsNavFragment" >
+        <action
+            android:id="@+id/action_resultsNavFragment_to_setNamesNavFragment"
+            app:destination="@id/setNamesNavFragment" />
+        <action
+            android:id="@+id/action_resultsNavFragment_to_ticTacToeNavFragment"
+            app:destination="@id/ticTacToeNavFragment" />
+        <action
+            android:id="@+id/action_resultsNavFragment_to_diceRollerNavFragment"
+            app:destination="@id/diceRollerNavFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/diceRollerNavFragment"
+        android:name="com.davit.kotlin.fragments.ex2.DiceRollerNavFragment"
+        android:label="DiceRollerNavFragment" />
+    <fragment
+        android:id="@+id/ticTacToeNavFragment"
+        android:name="com.davit.kotlin.fragments.ex2.TicTacToeNavFragment"
+        android:label="TicTacToeNavFragment" />
+</navigation>

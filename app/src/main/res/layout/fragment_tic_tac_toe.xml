@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ex1.TicTacToeFragment">
+
+        <TextView
+            android:id="@+id/players_names"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/players"
+            android:textSize="@dimen/title_size"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/title_margin_top"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image1"
+            android:layout_width="@dimen/field_size"
+            android:layout_height="@dimen/field_size"
+            android:background="@android:color/darker_gray"
+            android:padding="@dimen/field_padding_size"
+            app:layout_constraintBottom_toBottomOf="@id/guideline"
+            app:layout_constraintEnd_toStartOf="@+id/image2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideline"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image2"
+            android:layout_width="@dimen/field_size"
+            android:layout_height="@dimen/field_size"
+            android:background="@android:color/darker_gray"
+            android:padding="@dimen/field_padding_size"
+            app:layout_constraintBottom_toBottomOf="@id/guideline"
+            app:layout_constraintEnd_toStartOf="@+id/image3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/image1"
+            app:layout_constraintTop_toTopOf="@id/guideline"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image3"
+            android:layout_width="@dimen/field_size"
+            android:layout_height="@dimen/field_size"
+            android:background="@android:color/darker_gray"
+            android:padding="@dimen/field_padding_size"
+            app:layout_constraintBottom_toBottomOf="@id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/image2"
+            app:layout_constraintTop_toTopOf="@id/guideline"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image4"
+            android:layout_width="@dimen/field_size"
+            android:layout_height="@dimen/field_size"
+            android:background="@android:color/darker_gray"
+            android:padding="@dimen/field_padding_size"
+            app:layout_constraintEnd_toStartOf="@+id/image5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/image1"
+            android:layout_marginBottom="@dimen/rows_vertical_margin"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image5"
+            android:layout_width="@dimen/field_size"
+            android:layout_height="@dimen/field_size"
+            android:background="@android:color/darker_gray"
+            android:padding="@dimen/field_padding_size"
+            app:layout_constraintEnd_toStartOf="@+id/image6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/image4"
+            app:layout_constraintTop_toTopOf="@id/image4"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image6"
+            android:layout_width="@dimen/field_size"
+            android:layout_height="@dimen/field_size"
+            android:background="@android:color/darker_gray"
+            android:padding="@dimen/field_padding_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/image5"
+            app:layout_constraintTop_toTopOf="@id/image4"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image7"
+            android:layout_width="@dimen/field_size"
+            android:layout_height="@dimen/field_size"
+            android:background="@android:color/darker_gray"
+            android:padding="@dimen/field_padding_size"
+            app:layout_constraintEnd_toStartOf="@+id/image8"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image1"
+            android:layout_marginTop="@dimen/rows_vertical_margin"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image8"
+            android:layout_width="@dimen/field_size"
+            android:layout_height="@dimen/field_size"
+            android:background="@android:color/darker_gray"
+            android:padding="@dimen/field_padding_size"
+            app:layout_constraintEnd_toStartOf="@+id/image9"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/image7"
+            app:layout_constraintTop_toTopOf="@id/image7"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image9"
+            android:layout_width="@dimen/field_size"
+            android:layout_height="@dimen/field_size"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/image8"
+            app:layout_constraintTop_toTopOf="@id/image7"
+            android:padding="@dimen/field_padding_size"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground" />
+
+        <TextView
+            android:id="@+id/current_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/title_size"
+            android:textStyle="bold"
+            android:text="@string/player_1"
+            app:layout_constraintTop_toBottomOf="@id/image8"
+            app:layout_constraintBottom_toTopOf="@id/new_game"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/new_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_game"
+            android:layout_marginBottom="@dimen/btn_bottom_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/end_game"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Button
+            android:id="@+id/end_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/end_game"
+            android:layout_marginBottom="@dimen/btn_bottom_margin"
+            app:layout_constraintStart_toEndOf="@id/new_game"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
