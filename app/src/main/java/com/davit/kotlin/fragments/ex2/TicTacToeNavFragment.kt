@@ -1,7 +1,6 @@
 package com.davit.kotlin.fragments.ex2
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,16 +10,10 @@ import androidx.fragment.app.setFragmentResult
 import com.davit.kotlin.fragments.R
 import com.davit.kotlin.fragments.databinding.FragmentTicTacToeBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [TicTacToeNavFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class TicTacToeNavFragment : BaseFragment(), View.OnClickListener {
     private var player1Name: String = "Player 1"
     private var player2Name: String = "Player 2"
@@ -63,15 +56,6 @@ class TicTacToeNavFragment : BaseFragment(), View.OnClickListener {
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment TicTacToeFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             TicTacToeNavFragment().apply {
