@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".menu.MenuFragment">
+
+    <Button
+        android:id="@+id/add_meal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/remove_meal"/>
+
+    <Button
+        android:id="@+id/remove_meal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/remove"
+        app:layout_constraintEnd_toStartOf="@id/basket_btn"
+        app:layout_constraintStart_toEndOf="@id/add_meal"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/basket_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/add_shopping_cart"
+        android:paddingHorizontal="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/remove_meal"
+        app:layout_constraintTop_toTopOf="@id/remove_meal"
+        app:layout_constraintBottom_toBottomOf="@id/remove_meal"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/menu_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/menu_item"
+        android:layout_marginTop="@dimen/vertical_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_meal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

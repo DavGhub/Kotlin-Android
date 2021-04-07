@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contacts_nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="com.davit.kotlin.fragments.contacts.ContactsFragment"
+        android:label="fragment_contacts"
+        tools:layout="@layout/fragment_contacts" >
+        <action
+            android:id="@+id/action_contactsFragment_to_contactDetailFragment"
+            app:destination="@id/contactDetailFragment" >
+            <argument
+                android:name="contact"
+                app:argType="com.davit.kotlin.fragments.contacts.Contact"
+                app:nullable="true"
+                android:defaultValue="@null" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/contactDetailFragment"
+        android:name="com.davit.kotlin.fragments.contacts.ContactDetailFragment"
+        android:label="fragment_contact_detail"
+        tools:layout="@layout/fragment_contact_detail" >
+        <argument
+            android:name="contact"
+            app:argType="com.davit.kotlin.fragments.contacts.Contact"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.davit.kotlin.fragments.menu.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_mealDetailsFragment"
+            app:destination="@id/mealDetailsFragment" >
+            <argument
+                android:name="meal"
+                app:argType="com.davit.kotlin.fragments.menu.Meal"
+                app:nullable="true"
+                android:defaultValue="@null" />
+        </action>
+        <action
+            android:id="@+id/action_menuFragment_to_mealsBasketFragment"
+            app:destination="@id/mealsBasketFragment" >
+            <argument
+                android:name="mealList"
+                app:argType="com.davit.kotlin.fragments.menu.Basket"
+                app:nullable="true"
+                android:defaultValue="@null" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/mealDetailsFragment"
+        android:name="com.davit.kotlin.fragments.menu.MealDetailsFragment"
+        android:label="fragment_meal_details"
+        tools:layout="@layout/fragment_meal_details" >
+        <argument
+            android:name="meal"
+            app:argType="com.davit.kotlin.fragments.menu.Meal"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/mealsBasketFragment"
+        android:name="com.davit.kotlin.fragments.menu.MealsBasketFragment"
+        android:label="fragment_meals_basket"
+        tools:layout="@layout/fragment_meals_basket" >
+        <argument
+            android:name="mealList"
+            app:argType="com.davit.kotlin.fragments.menu.Basket"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_mealsBasketFragment_to_mealDetailsFragment"
+            app:destination="@id/mealDetailsFragment">
+            <argument
+                android:name="meal"
+                app:argType="com.davit.kotlin.fragments.menu.Meal"
+                app:nullable="true"
+                android:defaultValue="@null" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.davit.kotlin.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_contactsFragment"
+            app:destination="@id/contactsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+</navigation>
