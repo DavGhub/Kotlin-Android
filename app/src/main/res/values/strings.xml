@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Coroutines</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="next">Next</string>
+    <string name="initial_number_of_apples">Initial number of apples</string>
+    <string name="apples_max_count">Apples max count</string>
+    <string name="error_message">Max number must be bigger than initial number</string>
+    <string name="apples_count_in_box">Apples count in box</string>
+    <string name="add">Add</string>
+    <string name="get">Get</string>
+    <string name="reset">Reset</string>
+</resources>

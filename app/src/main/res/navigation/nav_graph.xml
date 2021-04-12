@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.davit.kotlin.coroutines.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_applesFragment"
+            app:destination="@id/applesFragment" >
+            <argument
+                android:name="apples"
+                app:argType="com.davit.kotlin.coroutines.ApplesDefaultCounts"
+                app:nullable="false" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/applesFragment"
+        android:name="com.davit.kotlin.coroutines.ApplesFragment"
+        android:label="fragment_apples"
+        tools:layout="@layout/fragment_apples" >
+        <argument
+            android:name="apples"
+            app:argType="com.davit.kotlin.coroutines.ApplesDefaultCounts"
+            app:nullable="false"/>
+    </fragment>
+</navigation>
