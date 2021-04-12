@@ -29,7 +29,7 @@ class ApplesFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-            args.apples.let {
+            args.apples.also {
                 initialNumber = it.initialNumber
                 maxNumber = it.maxNumber
                 currentNumber = it.initialNumber
@@ -64,8 +64,14 @@ class ApplesFragment : Fragment() {
 
 
     private fun checkResetButtonVisibility(){
+
+        binding.getApple.isEnabled = currentNumber != 0
+        binding.addApple.isEnabled = currentNumber < maxNumber
+
         if(currentNumber == 0 || currentNumber == maxNumber){
             binding.reset.visibility = View.VISIBLE
+        }else{
+            binding.reset.visibility = View.GONE
         }
     }
 
