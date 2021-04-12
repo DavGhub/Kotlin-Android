@@ -10,6 +10,7 @@ import androidx.navigation.fragment.navArgs
 import com.davit.kotlin.coroutines.databinding.FragmentApplesBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 
 class ApplesFragment : Fragment() {
@@ -40,7 +41,7 @@ class ApplesFragment : Fragment() {
         binding.addApple.setOnClickListener {
             lifecycleScope.launch(Dispatchers.Default) {
                 currentNumber++
-                lifecycleScope.launch(Dispatchers.Main){
+                withContext(Dispatchers.Main){
                     binding.currentNumber.text = currentNumber.toString()
                     checkResetButtonVisibility()
                 }
@@ -50,7 +51,7 @@ class ApplesFragment : Fragment() {
         binding.getApple.setOnClickListener {
             lifecycleScope.launch(Dispatchers.Default) {
                 currentNumber--
-                lifecycleScope.launch(Dispatchers.Main) {
+                withContext(Dispatchers.Main) {
                     binding.currentNumber.text = currentNumber.toString()
                     checkResetButtonVisibility()
                 }
@@ -79,5 +80,7 @@ class ApplesFragment : Fragment() {
         currentNumber = initialNumber
         binding.currentNumber.text = initialNumber.toString()
         binding.reset.visibility = View.GONE
+        binding.getApple.isEnabled = currentNumber != 0
+        binding.addApple.isEnabled = currentNumber < maxNumber
     }
 }
